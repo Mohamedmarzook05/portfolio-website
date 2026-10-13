@@ -1,0 +1,26 @@
+@media (prefers-reduced-motion: reduce) {
+  /* Kill all transitions and animations instantly */
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+
+  /* Native smooth scroll → instant */
+  html { scroll-behavior: auto !important; }
+
+  /* Reveal elements immediately */
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Stop signal animations in infrastructure visual */
+  .signal {
+    animation: none !important;
+    opacity: 1 !important;
+    top: 50% !important; /* Move to center of line so they are visible statically */
+    transform: translateY(-50%) !important;
+  }
+}
