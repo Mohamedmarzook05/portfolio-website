@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohamed Marzook is a BCA graduate building practical expertise in AWS, Linux, cloud infrastructure and DevOps." />
+  <meta name="author" content="Mohamed Marzook" />
+  <meta property="og:title" content="Mohamed Marzook — Systems / Cloud / DevOps" />
+  <meta property="og:type" content="website" />
+  <title>Mohamed Marzook — Systems / Cloud / DevOps</title>
+  
+  <link rel="stylesheet" href="css/style.css?v=2.1" />
+  <link rel="stylesheet" href="css/accessibility.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="main-nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#hero" aria-label="Mohamed Marzook — back to top">
+        <span class="nav__logo-initials">MM</span>
+        <span class="nav__logo-dot"></span>
+      </a>
+
+      <button class="nav__toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="nav-menu" role="list">
+        <li><a class="nav__link" href="#about">ABOUT</a></li>
+        <li><a class="nav__link" href="#systems">SYSTEMS</a></li>
+        <li><a class="nav__link" href="#projects">FIELD WORK</a></li>
+        <li><a class="nav__link" href="#build">CURRENT BUILD</a></li>
+        <li><a class="nav__link nav__link--cta" href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       HERO (Asymmetrical, Text Left, Meta Right)
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <!-- Editorial grid lines -->
+    <div class="blueprint-grid" aria-hidden="true"></div>
+    <div class="blueprint-frame" aria-hidden="true">
+      <div class="reg-mark reg-mark--tl"></div>
+      <div class="reg-mark reg-mark--tr"></div>
+      <div class="reg-mark reg-mark--bl"></div>
+      <div class="reg-mark reg-mark--br"></div>
+    </div>
+
+    <div class="container hero__layout">
+      <!-- LEFT: Massive Editorial Typography -->
+      <div class="hero__main" data-reveal>
+        <div class="editorial-annotation">
+          <span class="anno-box">[ SYS.01 ]</span>
+          <span class="anno-line"></span>
+          <span class="anno-text">CAP HEIGHT / H1</span>
+        </div>
+        
+        <h1 class="hero__title">
+          <span class="hero__title-line">MOHAMED</span>
+          <span class="hero__title-line">MARZOOK</span>
+        </h1>
+        
+        <h2 class="hero__subtitle">DEVOPS ENGINEER</h2>
+        
+        <div class="editorial-annotation">
+          <span class="anno-line"></span>
+          <span class="anno-text">BASELINE / HTTP</span>
+        </div>
+
+        <p class="hero__statement">
+          I build systems that are designed to keep working.
+        </p>
+      </div>
+
+      <!-- RIGHT: Technical Documentation Panel -->
+      <aside class="hero__meta-panel" data-reveal>
+        <div class="panel-header">
+          <span class="panel-title">SYSTEM / MM-01</span>
+          <div class="panel-status">
+            <span class="status-pulse"></span>
+            OPERATIONAL
+          </div>
+        </div>
+        <div class="panel-body">
+          <div class="panel-row">
+            <span class="panel-label">REGION</span>
+            <span class="panel-value">AP-SOUTH-1</span>
+          </div>
+          <div class="panel-row">
+            <span class="panel-label">STACK</span>
+            <span class="panel-value highlight">AWS · LINUX · GIT</span>
+          </div>
+          <div class="panel-row">
+            <span class="panel-label">BUILD</span>
+            <span class="panel-value">2026</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       LIVING INFRASTRUCTURE VISUALIZATION
+  ═══════════════════════════════════════════ -->
+  <section class="visual-system" aria-hidden="true">
+    <div class="container">
+      <div class="arch-diagram" data-reveal>
+        <div class="arch-node">USER</div>
+        
+        <div class="arch-link">
+          <div class="signal signal--flow"></div>
+        </div>
+        
+        <div class="arch-node">APPLICATION LOAD BALANCER</div>
+        
+        <div class="arch-link arch-link--split">
+          <div class="signal signal--flow"></div>
+        </div>
+        
+        <div class="arch-branch">
+          <div class="arch-path">
+            <div class="arch-node arch-node--box">EC2-01<br><span class="service-label">NGINX</span></div>
+            <div class="arch-link">
+              <div class="signal signal--flow signal--delay1"></div>
+            </div>
+          </div>
+          <div class="arch-path">
+            <div class="arch-node arch-node--box">EC2-02<br><span class="service-label">NGINX</span></div>
+            <div class="arch-link">
+              <div class="signal signal--flow signal--delay2 signal--alt"></div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="arch-link arch-link--merge">
+          <div class="signal signal--flow signal--delay3"></div>
+        </div>
+        
+        <div class="arch-node">WEBSITE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT THE OPERATOR
+  ═══════════════════════════════════════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-identity" data-reveal>
+        <h3 class="section-num">01</h3>
+        <h4 class="section-title">ABOUT THE OPERATOR</h4>
+      </div>
+      
+      <div class="about__grid">
+        <p class="about__lead" data-reveal>
+          Computer Applications graduate building practical expertise in cloud infrastructure, Linux systems and DevOps practices.
+        </p>
+        
+        <div class="about__metrics" data-reveal>
+          <div class="metric">
+            <span class="metric-label">BACKGROUND</span>
+            <span class="metric-value">BCA</span>
+            <span class="metric-value">2026</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">FOCUS</span>
+            <span class="metric-value">CLOUD</span>
+            <span class="metric-value">SYSTEMS</span>
+            <span class="metric-value">AUTOMATION</span>
+          </div>
+          <div class="metric">
+            <span class="metric-label">CURRENTLY</span>
+            <span class="metric-value">BUILDING</span>
+            <span class="metric-value">LEARNING</span>
+            <span class="metric-value">DEPLOYING</span>
+          </div>
+        </div>
+        
+        <p class="about__footnote" data-reveal>
+          Currently somewhere between learning and production.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SYSTEMS (INTERACTIVE INDEX)
+  ═══════════════════════════════════════════ -->
+  <section class="section systems" id="systems">
+    <div class="container">
+      <div class="section-identity" data-reveal>
+        <h3 class="section-num">02</h3>
+        <h4 class="section-title">SYSTEMS</h4>
+      </div>
+      
+      <div class="index-list">
+        <!-- Row 1 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">01</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">CLOUD COMPUTING</h5>
+            <p class="index-row__meta">AWS / EC2 / EBS / S3</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Infrastructure as a Service (IaaS)</span>
+              <span>Block Storage</span>
+            </div>
+            <div class="blueprint-hint">AWS<br>SYS</div>
+          </div>
+        </div>
+        
+        <!-- Row 2 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">02</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">LINUX</h5>
+            <p class="index-row__meta">SYSTEMS / CLI / FILESYSTEMS</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Administration</span>
+              <span>Shell Scripting</span>
+            </div>
+            <div class="blueprint-hint">LNX<br>CLI</div>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">03</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">NETWORKING</h5>
+            <p class="index-row__meta">TCP/IP / DNS / HTTP</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Routing Protocols</span>
+              <span>Web Traffic</span>
+            </div>
+            <div class="blueprint-hint">NET<br>TCP</div>
+          </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">04</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">VERSION CONTROL</h5>
+            <p class="index-row__meta">GIT / GITHUB</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Source Control</span>
+              <span>Branching Strategies</span>
+            </div>
+            <div class="blueprint-hint">GIT<br>VCS</div>
+          </div>
+        </div>
+
+        <!-- Row 5 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">05</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">AUTOMATION</h5>
+            <p class="index-row__meta">BASH / CRON / CLI</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Task Scheduling</span>
+              <span>Script Execution</span>
+            </div>
+            <div class="blueprint-hint">AUT<br>EXE</div>
+          </div>
+        </div>
+
+        <!-- Row 6 -->
+        <div class="index-row" data-reveal>
+          <div class="index-row__num">06</div>
+          <div class="index-row__main">
+            <h5 class="index-row__title">INFRASTRUCTURE</h5>
+            <p class="index-row__meta">VPC / STORAGE / COMPUTE</p>
+          </div>
+          <div class="index-row__expanded">
+            <div class="expanded-data">
+              <span class="data-label">CORE FOCUS</span>
+              <span>Virtual Networks</span>
+              <span>Subnets &amp; Security</span>
+            </div>
+            <div class="blueprint-hint">INF<br>VPC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FIELD WORK (PROJECTS AS CASE STUDIES)
+  ═══════════════════════════════════════════ -->
+  <section class="section field-work" id="projects">
+    <div class="container">
+      <div class="section-identity" data-reveal>
+        <h3 class="section-num">03</h3>
+        <h4 class="section-title">FIELD WORK</h4>
+      </div>
+
+      <!-- Case Study 01 -->
+      <article class="case-study" data-reveal>
+        <header class="case-study__header">
+          <span class="case-study__id">PROJECT 001</span>
+          <h4 class="case-study__title">EBS<br>BACKUP / RECOVERY</h4>
+        </header>
+        
+        <div class="case-study__body">
+          <aside class="case-study__specs">
+            <span class="spec-label">AWS / 2026</span>
+            <ul class="spec-list">
+              <li>EC2</li>
+              <li>EBS</li>
+              <li>XFS</li>
+              <li>SNAPSHOT</li>
+              <li>LINUX</li>
+            </ul>
+          </aside>
+          
+          <div class="case-study__main">
+            <div class="workflow-pipe" aria-label="Process Flow">
+              <div class="wf-node">VOLUME</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node">FORMAT</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node">MOUNT</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node">DATA</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node wf-node--accent">SNAPSHOT</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node">RESTORE</div>
+              <div class="wf-arrow">↓</div>
+              <div class="wf-node">VERIFY</div>
+            </div>
+            
+            <div class="case-study__outcome">
+              <span class="outcome-label">KEY OUTCOME</span>
+              <p>Successfully provisioned an EC2 instance and formatted a new EBS volume with the XFS filesystem. Stored test data, generated a snapshot, and executed a full recovery onto a new EBS volume. Re-mounted the restored volume to verify data persistence and structural integrity.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Case Study 02 (CURRENT BUILD) -->
+      <article class="case-study" data-reveal>
+        <header class="case-study__header">
+          <span class="case-study__id">PROJECT 002</span>
+          <h4 class="case-study__title">PORTFOLIO<br>INFRASTRUCTURE</h4>
+        </header>
+        
+        <div class="case-study__body">
+          <aside class="case-study__specs">
+            <span class="spec-badge">CURRENT BUILD</span>
+            <ul class="spec-list">
+              <li>AWS</li>
+              <li>EC2</li>
+              <li>ALB</li>
+              <li>TARGET GROUP</li>
+              <li>SECURITY GROUP</li>
+              <li>NGINX</li>
+            </ul>
+          </aside>
+          
+          <div class="case-study__main">
+            <pre class="ascii-block" aria-hidden="true">
+APPLICATION LOAD BALANCER
+        |
+   +----+----+
+   |         |
+ EC2-01    EC2-02
+   |         |
+ NGINX     NGINX
+   |         |
+   +----+----+
+        |
+     WEBSITE</pre>
+            <div class="case-study__outcome">
+              <span class="outcome-label">ARCHITECTURE INTENT</span>
+              <p>Designing a highly available, load-balanced web infrastructure across multiple EC2 instances running Nginx. Focused on secure traffic routing via Target Groups and Security Groups to ensure robust availability.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CURRENT BUILD / LEARNING
+  ═══════════════════════════════════════════ -->
+  <section class="section build" id="build">
+    <div class="container">
+      <div class="section-identity" data-reveal>
+        <h3 class="section-num">04</h3>
+        <h4 class="section-title">CURRENT BUILD</h4>
+      </div>
+      
+      <div class="build__layout">
+        <!-- Progress Editorials -->
+        <div class="build__progress">
+          <span class="block-title">CURRENT LEARNING STAGE</span>
+          
+          <div class="prog-row" data-reveal>
+            <span class="prog-key">AWS</span>
+            <span class="prog-bar">████████░░</span>
+          </div>
+          <div class="prog-row" data-reveal>
+            <span class="prog-key">LINUX</span>
+            <span class="prog-bar">██████░░░░</span>
+          </div>
+          <div class="prog-row" data-reveal>
+            <span class="prog-key">DEVOPS</span>
+            <span class="prog-bar">████░░░░░░</span>
+          </div>
+          <div class="prog-row" data-reveal>
+            <span class="prog-key">DOCKER</span>
+            <span class="prog-bar">██░░░░░░░░</span>
+          </div>
+          <div class="prog-row" data-reveal>
+            <span class="prog-key">TERRAFORM</span>
+            <span class="prog-bar">░░░░░░░░░░</span>
+          </div>
+        </div>
+
+        <!-- Upcoming & Certs -->
+        <div class="build__queue">
+          <div class="queue-block" data-reveal>
+            <span class="block-title">NEXT:</span>
+            <ul class="queue-list">
+              <li>DOCKER</li>
+              <li>CI/CD</li>
+              <li>TERRAFORM</li>
+              <li>KUBERNETES</li>
+            </ul>
+          </div>
+          
+          <div class="cert-panel" data-reveal>
+            <div class="cert-header">
+              <span class="cert-label">AWS CLOUD PRACTITIONER</span>
+              <span class="cert-status">STATUS: PLANNED</span>
+            </div>
+            <p class="cert-statement">
+              No shortcuts.<br>
+              Building first.<br>
+              Certifying next.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+    <div class="container contact__layout">
+      <div class="contact__main" data-reveal>
+        <h2 class="contact__giant">LET'S<br>BUILD.</h2>
+        <div class="contact__links">
+          <a href="#" class="btn-link">EMAIL</a>
+          <a href="#" class="btn-link">GITHUB</a>
+          <a href="#" class="btn-link">LINKEDIN</a>
+        </div>
+      </div>
+      
+      <div class="contact__form-panel" data-reveal>
+        <form class="blueprint-form" id="contact-form">
+          <div class="form-row">
+            <label for="name">ID / NAME</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">ADDRESS / EMAIL</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-row form-row--tall">
+            <label for="message">PAYLOAD / MESSAGE</label>
+            <textarea id="message" required></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" id="contact-submit" class="submit-btn">TRANSMIT</button>
+            <span class="form-warning">This form is currently a UI demo — no backend is connected.</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__block">
+          <span>MM / 2026</span>
+          <span class="highlight">AWS · LINUX · GIT</span>
+        </div>
+        <div class="footer__block footer__block--center">
+          <div class="status-wrap">
+            <span class="status-pulse"></span>
+            <span>STATUS ● ONLINE</span>
+          </div>
+        </div>
+        <div class="footer__block footer__block--right">
+          <span>BUILT WITH</span>
+          <span>HTML · CSS · JAVASCRIPT</span>
+        </div>
+      </div>
+      <div class="footer__end">
+        <span>01 — END OF DOCUMENT</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js?v=2.1"></script>
+</body>
+</html>
